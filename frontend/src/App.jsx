@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState, useRef } from "react";
-import html2canvas from "html2canvas"; // Import the library
+import html2canvas from "html2canvas";
 import "./App.css";
 
-const API = "http://localhost:8000";
-const ALL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const API = "https://employee-availability-scheduler.onrender.com";
 
+const ALL_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 async function apiGet(path) {
   const res = await fetch(`${API}${path}`);
   const data = await res.json();
